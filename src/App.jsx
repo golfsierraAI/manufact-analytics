@@ -7,6 +7,7 @@ import ScatterPlot from "./components/scatterChart";
 function App() {
   const [activePlot, setActivePlot] = React.useState("scatter");
 
+  // This function will change the active graph on the screen
   const changePlot = () => {
     if (activePlot === "scatter") {
       setActivePlot("bar");

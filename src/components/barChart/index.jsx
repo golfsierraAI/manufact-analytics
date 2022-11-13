@@ -1,25 +1,6 @@
 import ReactEcharts from "echarts-for-react";
 import React from "react";
 
-// type title = {
-//   text: string;
-//   textAlign: string;
-//   left: string;
-// };
-
-// type xAxis = {
-//   type: string;
-//   name: string;
-//   nameLocation: string;
-//   nameGap: number;
-//   data: number[];
-// };
-
-// type BarChart = {
-//   title: title;
-//   xAxis: xAxis;
-// };
-
 const BarChart = (props) => {
   const [barChartData, setBarChartData] = React.useState({});
 
@@ -29,6 +10,8 @@ const BarChart = (props) => {
 
   const prepareBarChartData = () => {
     const map = new Map();
+    // we are preparing a map with which we will calculate the
+    // average concentration and different type of alcohol
     props.data.forEach((item) => {
       if (map.has(item.Alcohol)) {
         map.get(item.Alcohol).count += 1;
